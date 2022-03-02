@@ -127,85 +127,115 @@ h6::before {
   text-align: center;
   position: relative;
 }
-/* .banner-section {
-    background: url(../img/banner.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-} */
+.banner-section {
+  background: url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.banner-section .cover{
+  width: 100%;
+  height: 100%;
+  position: absolute ;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.banner-section h6 {
+  position: relative;
+  z-index: 10;
+}
 
 .banner-section h2 {
   font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 10;
+  color: #fff;
 }
-.banner-section h2 {
-  font-family: "Poppins", sans-serif;
-}
+
 .banner-section p {
   margin: 10px 0 20px 0;
+  color: #fff;
+  position: relative;
+  z-index: 10;
 }
-@media screen and (max-width:600px) {
+.banner-section a {
+  position: relative;
+  z-index: 10;
+}
+@media screen and (max-width: 600px) {
   .banner-section {
     padding: 80px 0;
   }
-  
 }
 /* =============== Banner Section End ===============  */
 
-
-
-
-
-
 /* =============== About Section Start ===============  */
 .about h6::before {
-    left:0;
-    transform: translateX(0%);
-    width: 30px;
-  }
-.about ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  left: 0;
+  transform: translateX(0%);
+  width: 30px;
 }
-.about ul li a .fab{
-    width: 40px;
-    height: 40px;
-    line-height: 36px;
-    text-align: center;
-    border: #48487f 2px solid;
-    border-radius: 4px;
-    color: #48487f;
-    transition: all .5s;
+.about ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.about ul li a .fab:hover{
-    background-color: #48487f;
-    color: #fff;
-    transform: scale(1.2,1.2);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.about ul li a .fab {
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  border: #48487f 2px solid;
+  border-radius: 4px;
+  color: #48487f;
+  transition: all 0.5s;
+}
+.about ul li a .fab:hover {
+  background-color: #48487f;
+  color: #fff;
+  transform: scale(1.2, 1.2);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* =============== About Section End ===============  */
 
-
-
-
-
 /* =============== New Section Start ===============  */
-.new{
-    padding: 100px 0;
+.new {
+  padding: 100px 0;
 }
 /* =============== New Section End ===============  */
-
-
-
-
+/* =============== core Section Start ===============  */
+.core {
+  padding: 50px 0;
+  background-color: #48487f;
+}
+.core .my-3 {
+  transition: all 0.5s;
+  color: #fff;
+  position: relative;
+  padding: 20px 0;
+  border-radius: 20px;
+  text-align: center;
+}
+.core .my-3:hover {
+  background-color: #ffff;
+  color: #000 !important;
+  transform: scale(0.9, 0.9);
+}
+.core h6::before {
+  background-color: #fff;
+}
+/* =============== core Section End ===============  */
 
 /* =============== Footer Section Start ===============  */
-footer{
+footer {
   width: 100%;
   background: #111;
 }
-footer .content{
+footer .content {
   max-width: 1350px;
   margin: auto;
   padding: 20px;
@@ -213,36 +243,38 @@ footer .content{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-footer .content p,a{
+footer .content p,
+a {
   color: #fff;
 }
-footer .content .box{
+footer .content .box {
   width: 33%;
   transition: all 0.4s ease;
 }
-footer .content .topic{
+footer .content .topic {
   font-size: 22px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 16px;
-
 }
-footer .content p{
+footer .content p {
   text-align: justify;
 }
-footer .content .lower .topic{
+footer .content .lower .topic {
   margin: 24px 0 5px 0;
 }
-footer .content .lower i{
+footer .content .lower i {
   padding-right: 16px;
 }
-footer .content .middle{
+footer .content .middle {
   padding-left: 80px;
 }
-footer .content .middle a{
+footer .content .middle a {
   line-height: 32px;
 }
-footer .content .right input[type="text"]{
+footer .content .right input[type="text"],
+footer .content .right input[type="tel"],
+footer .content .right input[type="email"] {
   height: 45px;
   width: 100%;
   outline: none;
@@ -253,7 +285,18 @@ footer .content .right input[type="text"]{
   font-size: 17px;
   border: 2px solid #222222;
 }
-footer .content .right input[type="submit"]{
+
+footer .content .right textarea {
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content .right input[type="submit"] {
   height: 42px;
   width: 100%;
   font-size: 18px;
@@ -267,11 +310,11 @@ footer .content .right input[type="submit"]{
   border: 2px solid #48487f;
   transition: all 0.3s ease-in-out;
 }
-.content .right input[type="submit"]:hover{
+.content .right input[type="submit"]:hover {
   background: none;
-  color:  #48487f;
+  color: #48487f;
 }
-footer .content .media-icons a{
+footer .content .media-icons a {
   font-size: 16px;
   height: 45px;
   width: 45px;
@@ -280,53 +323,50 @@ footer .content .media-icons a{
   line-height: 43px;
   border-radius: 5px;
   border: 2px solid #222222;
-  margin: 30px 5px 0 0;
+  margin: 5px 5px 0 0;
   transition: all 0.3s ease;
 }
-.content .media-icons a:hover{
+.content .media-icons a:hover {
   border-color: #48487f;
 }
-footer .bottom{
+footer .bottom {
   width: 100%;
   text-align: center;
   color: #d9d9d9;
   padding: 10px 0;
 }
-footer .bottom a{
+footer .bottom a {
   color: #48487f;
 }
-footer a{
+footer a {
   transition: all 0.3s ease;
 }
-footer a:hover{
+footer a:hover {
   color: #48487f;
 }
-@media (max-width:1100px) {
-  footer .content .middle{
+@media (max-width: 1100px) {
+  footer .content .middle {
     padding-left: 50px;
   }
 }
-@media (max-width:950px){
-  footer .content .box{
+@media (max-width: 950px) {
+  footer .content .box {
     width: 50%;
   }
-  .content .right{
+  .content .right {
     margin-top: 40px;
   }
 }
-@media (max-width:560px){
-  footer{
+@media (max-width: 560px) {
+  footer {
     position: relative;
   }
-  footer .content .box{
+  footer .content .box {
     width: 100%;
     margin-top: 30px;
   }
-  footer .content .middle{
+  footer .content .middle {
     padding-left: 0;
   }
 }
 /* =============== Footer Section End ===============  */
-
-
-
